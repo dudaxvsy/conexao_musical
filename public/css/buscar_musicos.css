@@ -1,0 +1,447 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #FAF7FC;
+    color: #5D5270;
+    display: flex;
+    flex-direction: column;
+}
+
+.topo {
+    width: 100%;
+    height: 88px;
+    background: #CBBBF7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 25px;
+}
+
+.logo > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.icone-musical {
+    font-size: 50px;
+    line-height: 1;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+.informacoes-usuario {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.nome-usuario {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tipo-usuario {
+    font-size: 13px;
+    margin-top: 4px;
+    opacity: 0.85;
+}
+
+.botao-sair {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    padding: 9px 21px;
+    border-radius: 22px;
+    transition: 0.2s;
+}
+
+.botao-sair:hover {
+    background: white;
+    color: #A996E8;
+}
+
+.conteudo {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 45px 35px 80px;
+    flex: 1;
+}
+
+.voltar {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #7D69A7;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.voltar:hover {
+    color: #5E4A85;
+}
+
+.cabecalho-pagina {
+    margin-bottom: 30px;
+}
+
+.cabecalho-pagina h1 {
+    color: #5E4A85;
+    font-size: 32px;
+    margin-bottom: 9px;
+}
+
+.cabecalho-pagina p {
+    color: #9A8EAA;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.filtro {
+    background: white;
+    border: 1px solid #DDD5E8;
+    border-radius: 14px;
+    padding: 25px 27px;
+    margin-bottom: 32px;
+}
+
+.titulo-filtro {
+    margin-bottom: 22px;
+}
+
+.titulo-filtro h2 {
+    color: #5E4A85;
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.titulo-filtro p {
+    color: #9A8EAA;
+    font-size: 13px;
+}
+
+.formulario-filtro {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr auto;
+    align-items: end;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: #746580;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.campo input {
+    width: 100%;
+    height: 43px;
+    padding: 0 13px;
+    border: 1px solid #DDD5E8;
+    border-radius: 8px;
+    outline: none;
+    color: #5D5270;
+    background: white;
+    font-size: 13px;
+}
+
+.campo input:focus {
+    border-color: #A996E8;
+    box-shadow: 0 0 0 3px rgba(169, 150, 232, 0.12);
+}
+
+.botao-buscar,
+.botao-contato {
+    border: none;
+    background: #A996E8;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.botao-buscar {
+    height: 43px;
+    padding: 0 24px;
+    font-size: 12px;
+}
+
+.botao-buscar:hover,
+.botao-contato:hover {
+    background: #9883DE;
+}
+
+.limpar-filtro {
+    display: inline-block;
+    margin-top: 15px;
+    color: #7D69A7;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.limpar-filtro:hover {
+    color: #5E4A85;
+}
+
+.mensagem {
+    padding: 13px 17px;
+    border-radius: 9px;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.mensagem.erro {
+    background: #F9E4E7;
+    color: #A53B48;
+    border: 1px solid #F0CCD1;
+}
+
+.resultado-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.resultado-cabecalho h2 {
+    color: #5E4A85;
+    font-size: 21px;
+}
+
+.resultado-cabecalho span {
+    color: #9A8EAA;
+    font-size: 13px;
+}
+
+.lista-musicos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.musico-card {
+    background: white;
+    border: 1px solid #DDD5E8;
+    border-radius: 14px;
+    padding: 23px;
+    transition: 0.2s;
+}
+
+.musico-card:hover {
+    border-color: #C7B9EC;
+    transform: translateY(-2px);
+}
+
+.musico-topo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icone-musico {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #F1ECFB;
+    color: #A996E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.dados-musico h2 {
+    color: #5E4A85;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.dados-musico p {
+    color: #9A8EAA;
+    font-size: 12px;
+    word-break: break-word;
+}
+
+.disponibilidades {
+    margin-top: 21px;
+    padding-top: 17px;
+    border-top: 1px solid #EEEAF3;
+}
+
+.rotulo {
+    display: block;
+    color: #A397B0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 9px;
+}
+
+.horario {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 10px;
+    background: #FAF7FC;
+    border-radius: 7px;
+    margin-top: 6px;
+    color: #7D718D;
+    font-size: 12px;
+}
+
+.horario strong {
+    color: #6B5C7D;
+    font-size: 12px;
+}
+
+.botao-contato {
+    display: block;
+    margin-top: 18px;
+    padding: 12px 15px;
+    font-size: 11px;
+}
+
+.estado-vazio {
+    background: white;
+    border: 1px solid #DDD5E8;
+    border-radius: 14px;
+    padding: 55px 30px;
+    text-align: center;
+}
+
+.icone-vazio {
+    color: #A996E8;
+    font-size: 40px;
+    margin-bottom: 17px;
+}
+
+.estado-vazio h2 {
+    color: #5E4A85;
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.estado-vazio p {
+    color: #9A8EAA;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+footer {
+    width: 100%;
+    height: 40px;
+    background: #CBBBF7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+    .formulario-filtro {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .botao-buscar {
+        width: 100%;
+    }
+
+    .lista-musicos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .topo {
+        padding: 0 25px;
+    }
+
+    .conteudo {
+        padding: 40px 20px 60px;
+    }
+
+    .formulario-filtro {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .topo {
+        height: 80px;
+    }
+
+    .logo {
+        font-size: 20px;
+        line-height: 19px;
+    }
+
+    .icone-musical {
+        font-size: 38px;
+    }
+
+    .usuario {
+        gap: 10px;
+    }
+
+    .nome-usuario {
+        font-size: 12px;
+    }
+
+    .tipo-usuario {
+        font-size: 10px;
+    }
+
+    .botao-sair {
+        padding: 7px 14px;
+        font-size: 11px;
+    }
+
+    .cabecalho-pagina h1 {
+        font-size: 27px;
+    }
+
+    .filtro,
+    .musico-card {
+        padding: 20px;
+    }
+}
+
+.contato-indisponivel { display:block; text-align:center; padding:14px 18px; border-radius:12px; background:#eeeaf5; color:#8d849b; font-size:13px; font-weight:700; }

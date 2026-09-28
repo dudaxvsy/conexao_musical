@@ -1,0 +1,53 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+body { min-height: 100vh; background: #FAF7FC; color: #5D5270; display: flex; flex-direction: column; }
+.topo { width: 100%; min-height: 88px; background: #CBBBF7; display: flex; align-items: center; justify-content: space-between; padding: 0 55px; }
+.logo { display: flex; align-items: center; gap: 12px; color: white; font-weight: bold; font-size: 27px; line-height: 25px; }
+.logo > div { display: flex; flex-direction: column; }
+.icone-musical { font-size: 50px; line-height: 1; }
+.voltar { color: white; text-decoration: none; font-size: 13px; font-weight: bold; border: 1px solid rgba(255,255,255,.85); padding: 9px 21px; border-radius: 22px; }
+.voltar:hover { background: white; color: #A996E8; }
+.conteudo { width: 100%; max-width: 900px; margin: 0 auto; padding: 65px 30px 70px; flex: 1; }
+.cabecalho { margin-bottom: 30px; }
+.cabecalho h1 { color: #5E4A85; font-size: 32px; margin-bottom: 9px; }
+.cabecalho p { color: #9A8EAA; font-size: 16px; }
+.card { background: white; border: 1px solid #DDD5E8; border-radius: 14px; padding: 30px; margin-bottom: 22px; }
+.perfil-topo { display: flex; align-items: center; gap: 30px; }
+.foto-area { width: 150px; display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.foto-perfil, .foto-placeholder { width: 125px; height: 125px; border-radius: 50%; object-fit: cover; border: 3px solid #E9E1F7; }
+.foto-placeholder { display: flex; align-items: center; justify-content: center; background: #E9E1F7; color: #A996E8; font-size: 48px; }
+#foto { display: none; }
+.botao-foto { margin-top: 13px; color: #A996E8; border: 1px solid #A996E8; padding: 8px 13px; border-radius: 18px; font-size: 11px; font-weight: bold; cursor: pointer; }
+.botao-foto:hover { background: #A996E8; color: white; }
+.ajuda { margin-top: 8px; color: #9A8EAA; font-size: 10px; text-align: center; }
+.dados-principais h2, .card > h2 { color: #5E4A85; font-size: 20px; margin-bottom: 10px; }
+.dados-principais p { color: #9A8EAA; font-size: 14px; margin-top: 7px; }
+.tipo { display: inline-block; color: #5E4A85; background: #E9E1F7; border-radius: 15px; padding: 5px 11px; font-size: 12px; font-weight: bold; }
+.linha-campos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.campo { margin-top: 20px; }
+.campo label { display: block; color: #746580; font-size: 13px; font-weight: bold; margin-bottom: 8px; }
+.campo input, .campo textarea { width: 100%; border: 1px solid #DDD5E8; border-radius: 8px; padding: 13px 14px; color: #5D5270; background: white; outline: none; font-size: 14px; }
+.campo input:focus, .campo textarea:focus { border-color: #A996E8; box-shadow: 0 0 0 3px rgba(169,150,232,.12); }
+.campo textarea { min-height: 120px; resize: vertical; line-height: 1.5; }
+.botoes { display: flex; justify-content: flex-end; gap: 12px; margin-top: 5px; }
+.botao { border: 0; border-radius: 22px; padding: 12px 22px; font-size: 12px; font-weight: bold; text-decoration: none; cursor: pointer; }
+.cancelar { color: #746580; background: #E9E1F7; }
+.salvar { color: white; background: #A996E8; }
+.salvar:hover { background: #9883DE; }
+.mensagem { padding: 13px 16px; border-radius: 9px; margin-bottom: 20px; font-size: 13px; }
+.mensagem.sucesso { background: #E4F4E8; color: #327444; }
+.mensagem.erro { background: #F9E4E7; color: #A53B48; }
+footer { width: 100%; height: 40px; background: #CBBBF7; display: flex; align-items: center; justify-content: center; color: white; font-size: 12px; font-weight: bold; }
+@media (max-width: 650px) { .topo { padding: 0 25px; } .logo { font-size: 20px; } .icone-musical { font-size: 38px; } .conteudo { padding: 50px 20px 60px; } .perfil-topo { flex-direction: column; text-align: center; } .linha-campos { grid-template-columns: 1fr; gap: 0; } .botoes { flex-direction: column; } .botao { text-align: center; width: 100%; } }
+
+.ajuda-campo { display:block; margin-top:6px; color:#9A8EAA; font-size:11px; }
+
+.descricao-card { color:#9A8EAA; font-size:13px; line-height:1.5; margin-top:-2px; margin-bottom:4px; }
+
+.conta {
+    color: #5E4A85;
+    background: #E9E1F7;
+}
+
+.conta:hover {
+    background: #DDD5E8;
+}

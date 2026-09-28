@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #FAF7FC;
+    color: #5D5270;
+}
+
+
+/* =========================
+   TOPO
+========================= */
+
+.topo {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    background: #CBBBF7;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+
+    font-weight: bold;
+    font-size: 25px;
+
+    line-height: 23px;
+}
+
+.logo > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.icone-musical {
+    font-size: 48px;
+    line-height: 1;
+}
+
+
+/* =========================
+   ACESSO AO CADASTRO
+========================= */
+
+.acesso-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+.acesso-cadastro a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    transition: 0.2s;
+}
+
+.acesso-cadastro a:hover {
+    background: white;
+    color: #A996E8;
+}
+
+
+/* =========================
+   CONTEÚDO
+========================= */
+
+.conteudo {
+    width: 100%;
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding: 110px 60px 80px;
+
+    min-height: calc(100vh - 40px);
+}
+
+.cabecalho-pagina {
+    margin-bottom: 28px;
+}
+
+.conteudo h1 {
+    color: #5E4A85;
+
+    font-size: 28px;
+
+    margin-bottom: 5px;
+}
+
+.subtitulo {
+    color: #9A8EAA;
+
+    font-size: 14px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.formulario {
+    width: 100%;
+}
+
+.campo {
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.campo label {
+    display: block;
+
+    color: #746580;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.campo input {
+    width: 100%;
+    height: 44px;
+
+    border: 1px solid #DDD5E8;
+
+    border-radius: 8px;
+
+    background: white;
+
+    padding: 0 14px;
+
+    color: #62556F;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.campo input::placeholder {
+    color: #BDB4C8;
+}
+
+.campo input:focus {
+    border-color: #A996E8;
+
+    box-shadow: 0 0 0 2px rgba(169, 150, 232, 0.15);
+}
+
+
+/* =========================
+   MENSAGENS
+========================= */
+
+.mensagem {
+    width: 100%;
+
+    padding: 12px 16px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+}
+
+.sucesso {
+    background: #E4F4E8;
+
+    color: #327444;
+}
+
+.erro {
+    background: #F9E4E7;
+
+    color: #A53B48;
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.botoes {
+    display: flex;
+
+    justify-content: flex-end;
+
+    margin-top: 10px;
+}
+
+.botao {
+    height: 40px;
+
+    padding: 0 30px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.entrar {
+    background: #A996E8;
+
+    color: white;
+}
+
+.entrar:hover {
+    background: #9883DE;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 40px;
+
+    background: #CBBBF7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 700px) {
+
+    .topo {
+        padding: 0 20px;
+    }
+
+    .conteudo {
+        padding: 105px 25px 70px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .icone-musical {
+        font-size: 38px;
+    }
+
+    .acesso-cadastro span {
+        display: none;
+    }
+
+    .conteudo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .botoes {
+        justify-content: stretch;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+}
